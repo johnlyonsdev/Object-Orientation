@@ -5,8 +5,11 @@
 */
 
 //Code here
-
-
+const me = {
+  name: "John",
+  age: "26"
+}
+console.log(me)
 
 //////////////////////////// PROBLEM 2 ////////////////////////////
 
@@ -16,21 +19,25 @@
 //and goodBoy/goodGirl (a boolean).
 
 //Code here
-
-
-
+const dog = {
+  name: "Luna",
+  color: "Black",
+  age: 5,
+  goodGirl: true
+}
+console.log(dog)
 //////////////////////////// PROBLEM 3 ////////////////////////////
 /* Print out the name of the dog you created in problem 2 using dot-notation. */
 
 //Code here
-
+console.log(dog.name)
 
 
 //////////////////////////// PROBLEM 4 ////////////////////////////
 /* Print out the color of the dog you created in problem 2 using bracket-notation. */
 
 //Code here
-
+console.log(dog["color"])
 
 
 //////////////////////////// PROBLEM 5 ////////////////////////////
@@ -40,14 +47,22 @@
 */
 
 //Code here
-
+const favoriteThings = {
+  band: "Whiskey Myers",
+  food: "Nachos",
+  person: "Bruno Fernandes",
+  book: "Friday Night Lights",
+  movie: "The Lord of the Rings",
+  holiday: "Memorial Day"
+}
 
 /*
   After you've made your object, use bracket or dot notation to add another key named 'car' with the value being your favorite car and then another key named 'show' with the value being your favorite show.
 */
 
 //Code here
-
+favoriteThings.car = "Honda Civic"
+favoriteThings.show = "The Boys"
 
 /*
   Now use bracket or dot notation to change the value of the food key in your favoriteThings object to be 'Chicken Nuggets'
@@ -55,7 +70,9 @@
 */
 
 //Code here
-
+favoriteThings.food = "Chicken Nuggets"
+favoriteThings.book = "Harry Potter"
+console.log(favoriteThings)
 
 //////////////////////////// PROBLEM 6 ////////////////////////////
 
@@ -73,7 +90,8 @@ var carDetails = {
 */
 
 //Code Here
-
+const { color: newcolor, make: newmake, model: newmodel, year: newyear} = carDetails
+console.log(newcolor, newmake, newmodel, newyear)
 
 
 //////////////////////////// PROBLEM 7 ////////////////////////////
@@ -86,12 +104,18 @@ var carDetails = {
 
 function greeting( obj ) {
   //Code Here
-  
+  const { title: title, firstName: firstName, lastName: lastName} = obj
   // Do not edit the code below.
   return 'Hello, ' + title + ' ' + firstName + ' ' + lastName + '!';
   // Do not edit the code above.
 }
-
+const obj = {
+  title: "Sir",
+  firstName: "Alex",
+  lastName: "Ferguson"
+}
+const value = greeting(obj)
+console.log(value)
 
 
 //////////////////////////// PROBLEM 8 ////////////////////////////
@@ -105,9 +129,18 @@ function greeting( obj ) {
 */
 
 //Code Here
-
-
-
+function totalPopulation(object) {
+  const { utah: utahsum, california: californiasum, texas: texassum, arizona: arizonasum} = object
+  return utahsum + californiasum + texassum + arizonasum
+}
+const object = {
+  utah: 10,
+  california: 20,
+  texas: 30,
+  arizona: 40
+}
+const pop = totalPopulation(object)
+console.log(pop)
 //////////////////////////// PROBLEM 9 ////////////////////////////
 
 /*
